@@ -15,13 +15,10 @@ function setDate(){
 	const hourDegrees = ((hour / 12) * 360) + 90
 
 	secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-	console.log(seconds)
 
 	minHand.style.transform = `rotate(${minutesDegrees}deg)`;
-	console.log(minutes)
 
 	hourHand.style.transform = `rotate(${hourDegrees}deg)`;
-	console.log(hour)
 
 }
 
