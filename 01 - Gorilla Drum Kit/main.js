@@ -10,8 +10,8 @@ keys.forEach(key => key.addEventListener('transitionend', removePlayingClass));
 // ----Function to play sound when key is pressed---- //
 
 function playSound(event) {
-	const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-	const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+	const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+	const key = document.querySelector(`div[data-key="${event.keyCode}"]`);
 	if(!audio) return; // stop the function from running all together
 	audio.currentTime = 0; // When the key is press, the audio rewinds to the start
 	audio.play();
