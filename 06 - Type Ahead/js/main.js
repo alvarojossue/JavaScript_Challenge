@@ -4,4 +4,11 @@ const cities = [];
 
 fetch(endpoint) // Returns a promise
 	.then(blob => blob.json()) // First step to convert it to json, but it still a promise
-	.then(data => cities.push(...data))
+	.then(data => cities.push(...data)) // Gets the data and pushes it into the array of cities
+
+function findMatches(wordToMatch, cities) {
+	return cities.filter(place => {
+		const regex = new RegExp(wordToMatch, 'gi');
+		return place.city.match(regex) || place.state.match(regex)
+	})
+}
